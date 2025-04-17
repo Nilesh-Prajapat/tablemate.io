@@ -1,0 +1,72 @@
+.homeroot {
+    --_gradient-blend-mode: overlay;
+    --_gradient-blur: 0px;
+  
+    background:
+      radial-gradient(at 15% 20%, #6a0dad 0px, transparent 55%),   /* violet */
+      radial-gradient(at 90% 10%, #1e1b4b 0px, transparent 60%),   /* indigo */
+      radial-gradient(at 40% 80%, #3f0d12 0px, transparent 60%),   /* blood red black */
+      radial-gradient(at 75% 85%, #52057b 0px, transparent 50%),   /* deep purple */
+      radial-gradient(at 55% 15%, #2c003e 0px, transparent 50%),   /* dark wine */
+      radial-gradient(at 20% 75%, #0f172a 0px, transparent 55%) #0a0a23; /* deep navy */
+  
+    mix-blend-mode: var(--_gradient-blend-mode);
+    background-size: 200% 200%;
+    animation: gradient 10s ease-in-out infinite;
+    min-height: 100vh;
+    color: #ffffff;
+  }
+  
+  .frosted-backdrop {
+    backdrop-filter: blur(var(--_gradient-blur)) contrast(110%) brightness(90%);
+    -webkit-backdrop-filter: blur(var(--_gradient-blur)) contrast(110%) brightness(90%);
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .heading {
+    font-size: 2.5rem; /* 40px for main heading */
+    line-height: 1.2;
+  }
+  
+  .logo {
+    font-size: 4rem; /* 60px for logo */
+    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.5;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem; /* 32px for mobile */
+    }
+    .logo {
+      font-size: 3rem; /* 48px for mobile */
+    }
+    .subtitle {
+      font-size: 1rem; /* 16px for mobile */
+    }
+  }
+  

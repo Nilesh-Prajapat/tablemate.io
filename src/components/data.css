@@ -1,0 +1,79 @@
+.dataroot {
+    --_gradient-blend-mode: overlay;
+    --_gradient-blur: 0px;
+
+    background: 
+        radial-gradient(at 15% 20%, #6a0dad 0px, transparent 55%),   /* violet */
+        radial-gradient(at 90% 10%, #1e1b4b 0px, transparent 60%),   /* indigo */
+        radial-gradient(at 40% 80%, #3f0d12 0px, transparent 60%),   /* blood red black */
+        radial-gradient(at 75% 85%, #52057b 0px, transparent 50%),   /* deep purple */
+        radial-gradient(at 55% 15%, #2c003e 0px, transparent 50%),   /* dark wine */
+        radial-gradient(at 20% 75%, #0f172a 0px, transparent 55%) #0a0a23; /* deep navy */
+
+    mix-blend-mode: var(--_gradient-blend-mode);
+    background-size: 200% 200%;
+    animation: gradient 10s ease-in-out infinite;
+    min-height: 100vh;
+    color: black;  /* Black text color */
+}
+
+.frosted-backdrop {
+    backdrop-filter: blur(var(--_gradient-blur)) contrast(110%) brightness(90%);
+    -webkit-backdrop-filter: blur(var(--_gradient-blur)) contrast(110%) brightness(90%);
+    background-color: #ffffff;  /* White background */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.custom-select,
+input,
+select {
+    background-color: rgba(255, 255, 255, 0.3) !important; /* Transparent white */
+    color: black;  /* Black text color */
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3) !important;  /* Black border */
+    border-radius: 0.375rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='black' stroke-width='2'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+}
+
+/* Remove custom style for select element */
+select {
+    background-color: white !important;  /* White background */
+    color: black;  /* Black text */
+}
+
+.frosted-backdrop input:focus,
+.frosted-backdrop select:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.6) !important; /* Slightly brighter on focus */
+}
+
+.frosted-backdrop .form-container {
+    background-color: #ffffff; /* White background */
+    padding: 20px; /* Space inside the box */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.formbutton {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.formbutton:hover {
+    background-color: #45a049;
+}
